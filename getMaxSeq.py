@@ -156,15 +156,27 @@ def getMaxSeq(boardInfo, id):
     maxVal = max(max1,max2,max3,max4)
     seqList = []
     if(max1 == maxVal):
-        seqList.append(seq1)
+        seqList.extend(seq1)
     if(max2 == maxVal):
-        seqList.append(seq2)
+        seqList.extend(seq2)
     if(max3 == maxVal):
-        seqList.append(seq3)
+        seqList.extend(seq3)
     if(max4 == maxVal):
-        seqList.append(seq4)
+        seqList.extend(seq4)
     return maxVal, seqList
 
+boardInfo = [[0,1,1,1,1,1,0,0,0,0],
+            [0,1,0,0,0,0,0,0,0,0],
+            [0,1,-1,0,0,0,0,0,0,0],
+            [0,1,1,0,0,1,1,0,0,0],
+            [0,0,-1,1,0,1,0,0,0,0],
+            [0,0,0,0,0,1,1,1,0,0],
+            [0,0,0,0,0,1,0,0,0,0],
+            [0,0,0,0,-1,0,0,0,0,1],
+            [0,0,1,1,1,0,0,0,1,0],
+            [0,0,0,0,0,0,0,1,0,0]]
+id = 1
+seqs = getMaxSeq(boardInfo, id)
 
 
 
